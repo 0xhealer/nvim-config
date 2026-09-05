@@ -12,16 +12,19 @@
 **One-liner (clones/downloads and installs in one step):**
 
 Linux:
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/0xhealer/nvim-config/main/bootstrap.sh | bash
 ```
 
 Windows (PowerShell):
+
 ```powershell
 irm https://raw.githubusercontent.com/0xhealer/nvim-config/main/bootstrap.ps1 | iex
 ```
 
 **Manual — git clone:**
+
 ```bash
 git clone https://github.com/0xhealer/nvim-config.git
 cd nvim-config
@@ -83,62 +86,71 @@ nvim/
 
 **Colorschemes** (switch anytime with `<leader>uc`, live preview):
 
-| Plugin | What it does |
-|---|---|
-| `rose-pine/neovim` | Default colorscheme |
-| `catppuccin/nvim` | Colorscheme |
-| `folke/tokyonight.nvim` | Colorscheme |
-| `ellisonleao/gruvbox.nvim` | Colorscheme |
-| `rebelot/kanagawa.nvim` | Colorscheme |
-| `craftzdog/solarized-osaka.nvim` | Colorscheme |
+| Plugin                           | What it does        |
+| -------------------------------- | ------------------- |
+| `rose-pine/neovim`               | Default colorscheme |
+| `catppuccin/nvim`                | Colorscheme         |
+| `folke/tokyonight.nvim`          | Colorscheme         |
+| `ellisonleao/gruvbox.nvim`       | Colorscheme         |
+| `rebelot/kanagawa.nvim`          | Colorscheme         |
+| `craftzdog/solarized-osaka.nvim` | Colorscheme         |
 
 **Completion / LSP:**
 
-| Plugin | What it does |
-|---|---|
-| `saghen/blink.cmp` | Completion engine (LSP, snippets, path, buffer sources) |
-| `neovim/nvim-lspconfig` | Provides server configs consumed by native `vim.lsp.enable` |
-| `mason-org/mason.nvim` | Installs/manages LSP servers, formatters, linters |
-| `WhoIsSethDaniel/mason-tool-installer.nvim` | Auto-installs mason's `ensure_installed` list on startup |
+| Plugin                                      | What it does                                                |
+| ------------------------------------------- | ----------------------------------------------------------- |
+| `saghen/blink.cmp`                          | Completion engine (LSP, snippets, path, buffer sources)     |
+| `neovim/nvim-lspconfig`                     | Provides server configs consumed by native `vim.lsp.enable` |
+| `mason-org/mason.nvim`                      | Installs/manages LSP servers, formatters, linters           |
+| `WhoIsSethDaniel/mason-tool-installer.nvim` | Auto-installs mason's `ensure_installed` list on startup    |
 
 **Editing:**
 
-| Plugin | What it does |
-|---|---|
-| `jake-stewart/multicursor.nvim` | VSCode-style simultaneous multi-cursor editing |
-| `nvim-mini/mini.pairs` | Auto-closes brackets/quotes |
-| `nvim-mini/mini.diff` | Inline diff view against git |
-| `stevearc/conform.nvim` | Format-on-save, per-filetype formatters |
-| `nvim-treesitter/nvim-treesitter` | Syntax highlighting, indent, textobjects |
+| Plugin                            | What it does                                   |
+| --------------------------------- | ---------------------------------------------- |
+| `jake-stewart/multicursor.nvim`   | VSCode-style simultaneous multi-cursor editing |
+| `nvim-mini/mini.pairs`            | Auto-closes brackets/quotes                    |
+| `nvim-mini/mini.diff`             | Inline diff view against git                   |
+| `stevearc/conform.nvim`           | Format-on-save, per-filetype formatters        |
+| `nvim-treesitter/nvim-treesitter` | Syntax highlighting, indent, textobjects       |
 
 **UI:**
 
-| Plugin | What it does |
-|---|---|
-| `folke/snacks.nvim` | Fuzzy picker, floating terminal, notifications, lazygit, more |
-| `akinsho/bufferline.nvim` | Buffer tabs at the top of the window |
-| `nvim-mini/mini.statusline` | Statusline |
-| `nvim-mini/mini.icons` | Filetype/kind icons used throughout the UI |
-| `b0o/incline.nvim` | Floating per-window filename label |
-| `rachartier/tiny-cmdline.nvim` | Floating command-line UI |
-| `brenoprata10/nvim-highlight-colors` | Highlights hex/rgb color codes inline |
-| `folke/which-key.nvim` | Keybinding hint popup |
+| Plugin                               | What it does                                                  |
+| ------------------------------------ | ------------------------------------------------------------- |
+| `folke/snacks.nvim`                  | Fuzzy picker, floating terminal, notifications, lazygit, more |
+| `akinsho/bufferline.nvim`            | Buffer tabs at the top of the window                          |
+| `nvim-mini/mini.statusline`          | Statusline                                                    |
+| `nvim-mini/mini.icons`               | Filetype/kind icons used throughout the UI                    |
+| `b0o/incline.nvim`                   | Floating per-window filename label                            |
+| `rachartier/tiny-cmdline.nvim`       | Floating command-line UI                                      |
+| `brenoprata10/nvim-highlight-colors` | Highlights hex/rgb color codes inline                         |
+| `folke/which-key.nvim`               | Keybinding hint popup                                         |
 
 **Git:**
 
-| Plugin | What it does |
-|---|---|
-| `lewis6991/gitsigns.nvim` | Git change signs in the gutter, blame, hunk staging |
+| Plugin                        | What it does                                               |
+| ----------------------------- | ---------------------------------------------------------- |
+| `lewis6991/gitsigns.nvim`     | Git change signs in the gutter, blame, hunk staging        |
 | `linrongbin16/gitlinker.nvim` | Copy a permalink to the current line on GitHub/GitLab/etc. |
-| `esmuellert/codediff.nvim` | File/repo history diff viewer |
+| `esmuellert/codediff.nvim`    | File/repo history diff viewer                              |
 
 **Files:**
 
-| Plugin | What it does |
-|---|---|
-| `stevearc/oil.nvim` | Edit directories as buffers (file explorer) |
+| Plugin                     | What it does                                      |
+| -------------------------- | ------------------------------------------------- |
+| `stevearc/oil.nvim`        | Edit directories as buffers (file explorer)       |
 | `folke/todo-comments.nvim` | Highlights and lists `TODO`/`FIXME`/etc. comments |
 
 ## Credits
 
 `lua/tools/skeleton_c.lua` and `include_formatter.lua` are adapted from [Salar](https://github.com/SalarAlo/neovim_configuration)'s own C++ tooling.
+
+## TODO
+
+Neovim 0.13 is still nightly-only as of writing
+
+- [ ] Read `:help news-0.13` in full before touching anything below
+- [ ] Re-check `vim.pack` (`lua/plugins/init.lua`) — newest built-in API in 0.12, most likely of everything here to have changed
+- [ ] Re-check native LSP config (`vim.lsp.enable`/`vim.lsp.config`, `lua/plugins/lsp.lua` + `after/lsp/`) for any deprecations
+- [ ] Re-check the native `'autocomplete'` option's interaction with `blink.cmp` (`lua/plugins/editor.lua`) — 0.12 added native insert-mode completion, worth confirming nothing changed there for 0.13
