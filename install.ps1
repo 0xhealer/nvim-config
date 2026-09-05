@@ -36,7 +36,16 @@ foreach ($Package in $Packages)
 nvim --version
 
 # Installing scoop to install gcc
-Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+
+if (Get-Command scoop -ErrorAction SilentlyContinue)
+{
+    echo "Scoop already installed"
+} else
+{
+
+    Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+}
+
 scoop bucket add extras
 
 scoop install gcc cmake make
