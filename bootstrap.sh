@@ -15,4 +15,4 @@ rm -rf "$INSTALL_DIR"
 mkdir -p "$INSTALL_DIR"
 curl -fsSL "$REPO_URL/archive/refs/heads/main.tar.gz" | tar -xz -C "$INSTALL_DIR" --strip-components=1
 
-exec "$INSTALL_DIR/install.sh"
+exec bash "$INSTALL_DIR/install.sh"
