@@ -1,3 +1,8 @@
+-- sf (toggle file explorer) lives in core/keymaps.lua, not here. The
+-- h/q keymaps below are Oil's own internal buffer-local keymap option,
+-- not vim.keymap.set calls, so they stay here as part of Oil's setup table.
+vim.pack.add({ { src = "https://github.com/stevearc/oil.nvim" } })
+
 require("oil").setup({
 	default_file_explorer = true,
 	columns = {

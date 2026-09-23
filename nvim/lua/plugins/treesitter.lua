@@ -1,3 +1,5 @@
+vim.pack.add({ { src = "https://github.com/nvim-treesitter/nvim-treesitter" } })
+
 local TS = require("nvim-treesitter")
 
 -- On Windows, `tree-sitter build` (invoked by nvim-treesitter's *main*

@@ -1,4 +1,8 @@
--- which-key: on-demand keybinding reference
+-- which-key: on-demand keybinding reference. setup() and the group labels
+-- below aren't real keymaps (no vim.keymap.set calls), so they stay here;
+-- the actual <leader>? binding that opens it lives in core/keymaps.lua.
+vim.pack.add({ { src = "https://github.com/folke/which-key.nvim" } })
+
 require("which-key").setup({
 	preset = "modern",
 })
@@ -14,7 +18,3 @@ require("which-key").add({
 	{ "s", group = "Split / Window" },
 	{ ";", group = "Find (Snacks)" },
 })
-
-vim.keymap.set("n", "<leader>?", function()
-	require("which-key").show({ global = true })
-end, { noremap = true, silent = true, desc = "Show all keybindings (which-key)" })
